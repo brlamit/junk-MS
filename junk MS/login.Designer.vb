@@ -284,8 +284,8 @@ Public Class login
                 If count = 1 Then
                     ' MessageBox.Show("Authentication successful!")
                     Me.Hide()
-                    Dim hm As New home()
-                    hm.Show()
+                    Dim home As New home()
+                    home.Show()
                 Else
                     MessageBox.Show("Authentication failed. Invalid username or password.")
                 End If
