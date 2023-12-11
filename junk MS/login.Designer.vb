@@ -31,9 +31,9 @@ Public Class login
         Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaCircleProgressBar1 = New Guna.UI.WinForms.GunaCircleProgressBar()
         Me.lblExit = New System.Windows.Forms.Label()
-        Me.combo_username = New System.Windows.Forms.ComboBox()
         Me.checkbox_showpassword = New Guna.UI.WinForms.GunaCheckBox()
         Me.txt_password = New Guna.UI.WinForms.GunaTextBox()
+        Me.Combo_username = New System.Windows.Forms.ComboBox()
         CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,7 +45,7 @@ Public Class login
         Me.GunaLabel1.ForeColor = System.Drawing.Color.DodgerBlue
         Me.GunaLabel1.Location = New System.Drawing.Point(74, 36)
         Me.GunaLabel1.Name = "GunaLabel1"
-        Me.GunaLabel1.Size = New System.Drawing.Size(122, 25)
+        Me.GunaLabel1.Size = New System.Drawing.Size(154, 32)
         Me.GunaLabel1.TabIndex = 2
         Me.GunaLabel1.Text = "Login Here !"
         '
@@ -103,7 +103,7 @@ Public Class login
         Me.GunaLabel2.ForeColor = System.Drawing.Color.DimGray
         Me.GunaLabel2.Location = New System.Drawing.Point(97, 185)
         Me.GunaLabel2.Name = "GunaLabel2"
-        Me.GunaLabel2.Size = New System.Drawing.Size(69, 17)
+        Me.GunaLabel2.Size = New System.Drawing.Size(89, 23)
         Me.GunaLabel2.TabIndex = 8
         Me.GunaLabel2.Text = "Username"
         '
@@ -115,7 +115,7 @@ Public Class login
         Me.GunaLabel3.ForeColor = System.Drawing.Color.DimGray
         Me.GunaLabel3.Location = New System.Drawing.Point(104, 254)
         Me.GunaLabel3.Name = "GunaLabel3"
-        Me.GunaLabel3.Size = New System.Drawing.Size(66, 17)
+        Me.GunaLabel3.Size = New System.Drawing.Size(85, 23)
         Me.GunaLabel3.TabIndex = 9
         Me.GunaLabel3.Text = "Password"
         '
@@ -143,19 +143,9 @@ Public Class login
         Me.lblExit.ForeColor = System.Drawing.Color.Red
         Me.lblExit.Location = New System.Drawing.Point(377, 4)
         Me.lblExit.Name = "lblExit"
-        Me.lblExit.Size = New System.Drawing.Size(25, 24)
+        Me.lblExit.Size = New System.Drawing.Size(31, 29)
         Me.lblExit.TabIndex = 26
         Me.lblExit.Text = "X"
-        '
-        'combo_username
-        '
-        Me.combo_username.BackColor = System.Drawing.SystemColors.Menu
-        Me.combo_username.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.combo_username.FormattingEnabled = True
-        Me.combo_username.Location = New System.Drawing.Point(100, 213)
-        Me.combo_username.Name = "combo_username"
-        Me.combo_username.Size = New System.Drawing.Size(158, 28)
-        Me.combo_username.TabIndex = 27
         '
         'checkbox_showpassword
         '
@@ -184,16 +174,26 @@ Public Class login
         Me.txt_password.Name = "txt_password"
         Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txt_password.SelectedText = ""
-        Me.txt_password.Size = New System.Drawing.Size(158, 32)
+        Me.txt_password.Size = New System.Drawing.Size(158, 37)
         Me.txt_password.TabIndex = 28
+        '
+        'Combo_username
+        '
+        Me.Combo_username.BackColor = System.Drawing.SystemColors.Menu
+        Me.Combo_username.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Combo_username.FormattingEnabled = True
+        Me.Combo_username.Location = New System.Drawing.Point(100, 212)
+        Me.Combo_username.Name = "Combo_username"
+        Me.Combo_username.Size = New System.Drawing.Size(158, 28)
+        Me.Combo_username.TabIndex = 30
         '
         'login
         '
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(411, 450)
+        Me.Controls.Add(Me.Combo_username)
         Me.Controls.Add(Me.checkbox_showpassword)
         Me.Controls.Add(Me.txt_password)
-        Me.Controls.Add(Me.combo_username)
         Me.Controls.Add(Me.lblExit)
         Me.Controls.Add(Me.GunaCircleProgressBar1)
         Me.Controls.Add(Me.GunaLabel3)
@@ -284,8 +284,8 @@ Public Class login
                 If count = 1 Then
                     ' MessageBox.Show("Authentication successful!")
                     Me.Hide()
-                    Dim hm As New home()
-                    hm.Show()
+                    Dim home As New home()
+                    home.Show()
                 Else
                     MessageBox.Show("Authentication failed. Invalid username or password.")
                 End If
@@ -303,8 +303,7 @@ Public Class login
     Private Sub lblExit_Click(sender As Object, e As EventArgs) Handles lblExit.Click
         Application.Exit()
     End Sub
-
-    Friend WithEvents combo_username As ComboBox
     Friend WithEvents checkbox_showpassword As Guna.UI.WinForms.GunaCheckBox
     Friend WithEvents txt_password As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents Combo_username As ComboBox
 End Class

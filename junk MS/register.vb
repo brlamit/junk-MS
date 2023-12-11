@@ -64,7 +64,6 @@ Public Class register
                         command.Parameters.AddWithValue("@dob", CDate(dob_picker.Value))
                         command.Parameters.AddWithValue("@contact", txt_contact.Text)
                         command.Parameters.AddWithValue("@password", txt_password.Text)
-
                         command.ExecuteNonQuery()
                     End Using
 
