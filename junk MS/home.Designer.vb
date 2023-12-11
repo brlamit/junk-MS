@@ -28,8 +28,9 @@ Partial Class home
         Me.lblExit = New System.Windows.Forms.Label()
         Me.GunaPanel2 = New Guna.UI.WinForms.GunaPanel()
         Me.GunaPanel1 = New Guna.UI.WinForms.GunaPanel()
+        Me.Btn_about = New Guna.UI.WinForms.GunaAdvenceButton()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btn_menu = New System.Windows.Forms.Button()
+        Me.btnmenu = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GunaAnimateWindow1 = New Guna.UI.WinForms.GunaAnimateWindow(Me.components)
@@ -72,65 +73,101 @@ Partial Class home
         '
         Me.GunaPanel2.BackColor = System.Drawing.Color.DodgerBlue
         Me.GunaPanel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.GunaPanel2.Location = New System.Drawing.Point(333, 775)
-        Me.GunaPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GunaPanel2.Location = New System.Drawing.Point(335, 775)
+        Me.GunaPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.GunaPanel2.Name = "GunaPanel2"
-        Me.GunaPanel2.Size = New System.Drawing.Size(1171, 57)
+        Me.GunaPanel2.Size = New System.Drawing.Size(1169, 57)
         Me.GunaPanel2.TabIndex = 1
         '
         'GunaPanel1
         '
         Me.GunaPanel1.BackColor = System.Drawing.Color.DodgerBlue
+        Me.GunaPanel1.Controls.Add(Me.Btn_about)
         Me.GunaPanel1.Controls.Add(Me.Panel2)
         Me.GunaPanel1.Controls.Add(Me.Panel1)
         Me.GunaPanel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.GunaPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GunaPanel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GunaPanel1.Name = "GunaPanel1"
-        Me.GunaPanel1.Size = New System.Drawing.Size(333, 832)
+        Me.GunaPanel1.Size = New System.Drawing.Size(335, 832)
         Me.GunaPanel1.TabIndex = 0
+        '
+        'Btn_about
+        '
+        Me.Btn_about.Animated = True
+        Me.Btn_about.AnimationHoverSpeed = 0.07!
+        Me.Btn_about.AnimationSpeed = 0.03!
+        Me.Btn_about.BackColor = System.Drawing.Color.Transparent
+        Me.Btn_about.BaseColor = System.Drawing.Color.Transparent
+        Me.Btn_about.BorderColor = System.Drawing.Color.Black
+        Me.Btn_about.CheckedBaseColor = System.Drawing.Color.Gray
+        Me.Btn_about.CheckedBorderColor = System.Drawing.Color.Black
+        Me.Btn_about.CheckedForeColor = System.Drawing.Color.White
+        Me.Btn_about.CheckedImage = CType(resources.GetObject("Btn_about.CheckedImage"), System.Drawing.Image)
+        Me.Btn_about.CheckedLineColor = System.Drawing.Color.DimGray
+        Me.Btn_about.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.Btn_about.FocusedColor = System.Drawing.Color.Empty
+        Me.Btn_about.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_about.ForeColor = System.Drawing.Color.Black
+        Me.Btn_about.Image = Nothing
+        Me.Btn_about.ImageSize = New System.Drawing.Size(20, 20)
+        Me.Btn_about.LineColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.Btn_about.Location = New System.Drawing.Point(44, 273)
+        Me.Btn_about.Name = "Btn_about"
+        Me.Btn_about.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Btn_about.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.Btn_about.OnHoverForeColor = System.Drawing.Color.White
+        Me.Btn_about.OnHoverImage = Nothing
+        Me.Btn_about.OnHoverLineColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.Btn_about.OnPressedColor = System.Drawing.Color.Black
+        Me.Btn_about.Radius = 20
+        Me.Btn_about.Size = New System.Drawing.Size(123, 42)
+        Me.Btn_about.TabIndex = 8
+        Me.Btn_about.Text = "About"
+        Me.Btn_about.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.btn_menu)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel2.Controls.Add(Me.btnmenu)
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(333, 71)
+        Me.Panel2.Size = New System.Drawing.Size(335, 80)
         Me.Panel2.TabIndex = 3
         '
-        'btn_menu
+        'btnmenu
         '
-        Me.btn_menu.BackgroundImage = Global.junk_MS.My.Resources.Resources.icons8_menu_64
-        Me.btn_menu.Dock = System.Windows.Forms.DockStyle.Right
-        Me.btn_menu.Location = New System.Drawing.Point(268, 0)
-        Me.btn_menu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btn_menu.Name = "btn_menu"
-        Me.btn_menu.Size = New System.Drawing.Size(65, 71)
-        Me.btn_menu.TabIndex = 0
-        Me.btn_menu.UseVisualStyleBackColor = True
+        Me.btnmenu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnmenu.BackgroundImage = Global.junk_MS.My.Resources.Resources.icons8_menu_64
+        Me.btnmenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnmenu.Location = New System.Drawing.Point(261, 0)
+        Me.btnmenu.Name = "btnmenu"
+        Me.btnmenu.Size = New System.Drawing.Size(75, 80)
+        Me.btnmenu.TabIndex = 0
+        Me.btnmenu.UseVisualStyleBackColor = True
         '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Location = New System.Drawing.Point(0, 79)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(333, 142)
+        Me.Panel1.Size = New System.Drawing.Size(333, 136)
         Me.Panel1.TabIndex = 2
         Me.Panel1.Tag = "imagepanel"
         '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(333, 138)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.Size = New System.Drawing.Size(333, 137)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
@@ -169,10 +206,11 @@ Partial Class home
     Friend WithEvents GunaAnimateWindow1 As Guna.UI.WinForms.GunaAnimateWindow
     Friend WithEvents GunaPanel1 As Guna.UI.WinForms.GunaPanel
     Friend WithEvents GunaPanel2 As Guna.UI.WinForms.GunaPanel
-    Friend WithEvents btn_menu As Button
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents lblExit As Label
+    Friend WithEvents btnmenu As Button
+    Friend WithEvents Btn_about As Guna.UI.WinForms.GunaAdvenceButton
 End Class
