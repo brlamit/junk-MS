@@ -12,4 +12,8 @@
     Private Sub startup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
     End Sub
+
+    Private Sub percentagelbl_Click(sender As Object, e As EventArgs) Handles percentagelbl.Click
+
+    End Sub
 End Class

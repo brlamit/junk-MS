@@ -89,6 +89,12 @@
     <Compile Include="home.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="home2.Designer.vb">
+      <DependentUpon>home2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="home2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="login.Designer.vb">
       <DependentUpon>login.vb</DependentUpon>
     </Compile>

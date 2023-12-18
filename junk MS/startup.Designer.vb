@@ -43,8 +43,9 @@ Partial Class startup
         Me.GunaGradient2Panel1.GradientColor1 = System.Drawing.Color.DodgerBlue
         Me.GunaGradient2Panel1.GradientColor2 = System.Drawing.Color.Cyan
         Me.GunaGradient2Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.GunaGradient2Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GunaGradient2Panel1.Name = "GunaGradient2Panel1"
-        Me.GunaGradient2Panel1.Size = New System.Drawing.Size(800, 450)
+        Me.GunaGradient2Panel1.Size = New System.Drawing.Size(1067, 554)
         Me.GunaGradient2Panel1.TabIndex = 0
         '
         'GunaLabel3
@@ -52,9 +53,10 @@ Partial Class startup
         Me.GunaLabel3.AutoSize = True
         Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel3.ForeColor = System.Drawing.Color.White
-        Me.GunaLabel3.Location = New System.Drawing.Point(332, 333)
+        Me.GunaLabel3.Location = New System.Drawing.Point(443, 410)
+        Me.GunaLabel3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.GunaLabel3.Name = "GunaLabel3"
-        Me.GunaLabel3.Size = New System.Drawing.Size(152, 40)
+        Me.GunaLabel3.Size = New System.Drawing.Size(193, 50)
         Me.GunaLabel3.TabIndex = 5
         Me.GunaLabel3.Text = "Loading..."
         '
@@ -68,12 +70,13 @@ Partial Class startup
         Me.progressbar.IdleThickness = 15
         Me.progressbar.Image = Nothing
         Me.progressbar.ImageSize = New System.Drawing.Size(52, 52)
-        Me.progressbar.Location = New System.Drawing.Point(303, 157)
+        Me.progressbar.Location = New System.Drawing.Point(404, 193)
+        Me.progressbar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.progressbar.Name = "progressbar"
         Me.progressbar.ProgressMaxColor = System.Drawing.Color.DodgerBlue
         Me.progressbar.ProgressMinColor = System.Drawing.Color.Cyan
         Me.progressbar.ProgressOffset = 20
-        Me.progressbar.Size = New System.Drawing.Size(174, 154)
+        Me.progressbar.Size = New System.Drawing.Size(232, 190)
         Me.progressbar.TabIndex = 4
         '
         'percentagelbl
@@ -81,9 +84,10 @@ Partial Class startup
         Me.percentagelbl.AutoSize = True
         Me.percentagelbl.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.percentagelbl.ForeColor = System.Drawing.Color.White
-        Me.percentagelbl.Location = New System.Drawing.Point(67, 58)
+        Me.percentagelbl.Location = New System.Drawing.Point(89, 71)
+        Me.percentagelbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.percentagelbl.Name = "percentagelbl"
-        Me.percentagelbl.Size = New System.Drawing.Size(35, 32)
+        Me.percentagelbl.Size = New System.Drawing.Size(44, 41)
         Me.percentagelbl.TabIndex = 0
         Me.percentagelbl.Text = "%"
         '
@@ -92,9 +96,10 @@ Partial Class startup
         Me.GunaLabel2.AutoSize = True
         Me.GunaLabel2.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel2.ForeColor = System.Drawing.Color.White
-        Me.GunaLabel2.Location = New System.Drawing.Point(166, 59)
+        Me.GunaLabel2.Location = New System.Drawing.Point(221, 73)
+        Me.GunaLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.GunaLabel2.Name = "GunaLabel2"
-        Me.GunaLabel2.Size = New System.Drawing.Size(442, 40)
+        Me.GunaLabel2.Size = New System.Drawing.Size(555, 50)
         Me.GunaLabel2.TabIndex = 3
         Me.GunaLabel2.Text = "Junkyard Management System"
         '
@@ -103,11 +108,12 @@ Partial Class startup
         '
         'startup
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1067, 554)
         Me.Controls.Add(Me.GunaGradient2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "startup"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "startup"

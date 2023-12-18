@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
 
 Public Class register
     Private register_picturebox As Object
@@ -16,13 +17,7 @@ Public Class register
         Me.Dispose()
     End Sub
 
-    Private Sub checkbox_showpassword_CheckedChanged(sender As Object, e As EventArgs) Handles checkbox_showpassword.CheckedChanged
-        If checkbox_showpassword.Checked = True Then
-            txt_password.UseSystemPasswordChar = False
-        Else
-            txt_password.UseSystemPasswordChar = True
-        End If
-    End Sub
+
 
 
     Private Sub Btn_browse_Click(sender As Object, e As EventArgs) Handles Btn_browse.Click
@@ -83,6 +78,24 @@ Public Class register
             End If
         Else
             MessageBox.Show("Please fill in all required fields.")
+        End If
+    End Sub
+
+
+
+    'Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs)
+    '    If CheckBox1.Checked = True Then
+    '        txt_password.UseSystemPasswordChar = False
+    '    Else
+    '        txt_password.UseSystemPasswordChar = True
+    '    End If
+    'End Sub
+
+    Private Sub GunaCheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles GunaCheckBox1.CheckedChanged
+        If GunaCheckBox1.Checked = True Then
+            txt_password.UseSystemPasswordChar = False
+        Else
+            txt_password.UseSystemPasswordChar = True
         End If
     End Sub
 End Class

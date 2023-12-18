@@ -31,9 +31,9 @@ Public Class login
         Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaCircleProgressBar1 = New Guna.UI.WinForms.GunaCircleProgressBar()
         Me.lblExit = New System.Windows.Forms.Label()
-        Me.checkbox_showpassword = New Guna.UI.WinForms.GunaCheckBox()
-        Me.txt_password = New Guna.UI.WinForms.GunaTextBox()
         Me.Combo_username = New System.Windows.Forms.ComboBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.txt_password = New System.Windows.Forms.TextBox()
         CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -147,36 +147,6 @@ Public Class login
         Me.lblExit.TabIndex = 26
         Me.lblExit.Text = "X"
         '
-        'checkbox_showpassword
-        '
-        Me.checkbox_showpassword.BaseColor = System.Drawing.Color.White
-        Me.checkbox_showpassword.CheckedOffColor = System.Drawing.Color.Gray
-        Me.checkbox_showpassword.CheckedOnColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.checkbox_showpassword.FillColor = System.Drawing.Color.White
-        Me.checkbox_showpassword.Location = New System.Drawing.Point(236, 287)
-        Me.checkbox_showpassword.Margin = New System.Windows.Forms.Padding(2)
-        Me.checkbox_showpassword.Name = "checkbox_showpassword"
-        Me.checkbox_showpassword.Size = New System.Drawing.Size(20, 20)
-        Me.checkbox_showpassword.TabIndex = 29
-        '
-        'txt_password
-        '
-        Me.txt_password.BaseColor = System.Drawing.SystemColors.Menu
-        Me.txt_password.BorderColor = System.Drawing.Color.Silver
-        Me.txt_password.BorderSize = 1
-        Me.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txt_password.FocusedBaseColor = System.Drawing.Color.White
-        Me.txt_password.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_password.FocusedForeColor = System.Drawing.SystemColors.ControlText
-        Me.txt_password.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_password.Location = New System.Drawing.Point(100, 281)
-        Me.txt_password.Margin = New System.Windows.Forms.Padding(2)
-        Me.txt_password.Name = "txt_password"
-        Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txt_password.SelectedText = ""
-        Me.txt_password.Size = New System.Drawing.Size(158, 37)
-        Me.txt_password.TabIndex = 28
-        '
         'Combo_username
         '
         Me.Combo_username.BackColor = System.Drawing.SystemColors.Menu
@@ -187,13 +157,34 @@ Public Class login
         Me.Combo_username.Size = New System.Drawing.Size(158, 28)
         Me.Combo_username.TabIndex = 30
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.Location = New System.Drawing.Point(264, 293)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(18, 17)
+        Me.CheckBox1.TabIndex = 32
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'txt_password
+        '
+        Me.txt_password.BackColor = System.Drawing.SystemColors.Menu
+        Me.txt_password.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_password.Location = New System.Drawing.Point(101, 286)
+        Me.txt_password.Name = "txt_password"
+        Me.txt_password.Size = New System.Drawing.Size(157, 27)
+        Me.txt_password.TabIndex = 33
+        Me.txt_password.UseSystemPasswordChar = True
+        '
         'login
         '
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(411, 450)
-        Me.Controls.Add(Me.Combo_username)
-        Me.Controls.Add(Me.checkbox_showpassword)
         Me.Controls.Add(Me.txt_password)
+        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.Combo_username)
         Me.Controls.Add(Me.lblExit)
         Me.Controls.Add(Me.GunaCircleProgressBar1)
         Me.Controls.Add(Me.GunaLabel3)
@@ -218,13 +209,9 @@ Public Class login
     Friend WithEvents GunaCircleProgressBar1 As Guna.UI.WinForms.GunaCircleProgressBar
 
 
-    Private Sub checkbox_showpassword_CheckedChanged(sender As Object, e As EventArgs) Handles checkbox_showpassword.CheckedChanged
-        If checkbox_showpassword.Checked = True Then
-            txt_password.UseSystemPasswordChar = False
-        Else
-            txt_password.UseSystemPasswordChar = True
-        End If
-    End Sub
+
+
+
     Dim connection As New SqlConnection("Server=AMIT\SQLEXPRESS; Database=Project_JMS; Integrated Security=true")
     Dim dr As SqlDataReader
 
@@ -240,7 +227,7 @@ Public Class login
     Sub usercomboload(connection As SqlConnection)
         Try
             connection.Open()
-            combo_username.Items.Clear()
+            Combo_username.Items.Clear()
 
             ' Assuming your table is named "login" and has the username in the second column (index 1)
             Dim cmd As New SqlCommand("SELECT * FROM login", connection)
@@ -248,7 +235,7 @@ Public Class login
 
             While dr.Read
                 ' Assuming username is in the second column (index 1)
-                combo_username.Items.Add(dr.GetString(0))
+                Combo_username.Items.Add(dr.GetString(0))
             End While
         Catch ex As Exception
             ' Handle exceptions (display an error message, log the error, etc.)
@@ -259,7 +246,7 @@ Public Class login
     End Sub
 
     Private Sub Btn_login_Click(sender As Object, e As EventArgs) Handles Btn_login.Click
-        Dim username As String = combo_username.Text
+        Dim username As String = Combo_username.Text
         Dim password As String = txt_password.Text
 
         Try
@@ -303,7 +290,16 @@ Public Class login
     Private Sub lblExit_Click(sender As Object, e As EventArgs) Handles lblExit.Click
         Application.Exit()
     End Sub
-    Friend WithEvents checkbox_showpassword As Guna.UI.WinForms.GunaCheckBox
-    Friend WithEvents txt_password As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents Combo_username As ComboBox
+    Friend WithEvents CheckBox1 As CheckBox
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked = True Then
+            txt_password.UseSystemPasswordChar = False
+        Else
+            txt_password.UseSystemPasswordChar = True
+        End If
+    End Sub
+
+    Friend WithEvents txt_password As TextBox
 End Class
